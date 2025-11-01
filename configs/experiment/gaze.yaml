@@ -1,0 +1,56 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: gaze
+  - override /model: gaze
+  - override /callbacks: default
+  - override /trainer: gpu
+  - override /logger: wandb
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+tags: ["gaze"]
+
+seed: 42
+num_chunks: 2
+
+trainer:
+  min_epochs: 10
+  max_epochs: 10
+  precision: 16
+
+model:
+  net:
+    model_name: "resnet18"
+  compile: false
+
+data:
+  batch_size: 128
+  num_workers: 4
+
+logger:
+  wandb:
+    tags: ${tags}
+    group: "Gaze"
+    project: "Paper"
+    name: ${task_name}
+
+callbacks:
+  model_checkpoint:
+    monitor: "val/angular/Source"
+    mode: "min"
+    save_last: true
+    auto_insert_metric_name: false
+
+  early_stopping:
+    monitor: "val/angular/Source"
+    mode: "min"
+
+test: false
+
+paths:
+  log_dir: ${paths.root_dir}/logs/${logger.wandb.project}/${data.train_dataset}

@@ -1,0 +1,33 @@
+# HalfMix Configuration
+# Usage:
+# ```bash
+# python3 src/train.py model=halfmix ++model.compile=false
+# ```
+# Note: ++model.compile=false is required for compatibility
+
+defaults:
+  - gaze
+  - _self_
+
+_target_: src.models.halfmix_module.HalfMixLitModule
+
+# Dual-path architecture settings
+double_head: true
+compile: false
+
+# Regularization hyperparameters from paper
+use_dpr: true       # Use Diversity-Promoting Regularization
+use_dgfa: true      # Use Dual-Gaze Feature Alignment
+w_cs: 0.01         # Weight for cosine similarity in DPR
+w_kl: 1.0          # Weight for KL divergence in DPR
+beta_dgfa: 1.0     # Weight for DGFA loss (β in paper)
+
+# Network configuration
+net:
+  _target_: src.models.components.gaze.GazeModel
+  model_name: null
+  pretrained: true
+  num_chunks: ${num_chunks}
+  head_func: 
+    _target_: src.models.components.head.DoubleEmbeddingHead
+    _partial_: true
