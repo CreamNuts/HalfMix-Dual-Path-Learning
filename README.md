@@ -1,7 +1,7 @@
 # HalfMix Augmentation and Regularized Dual-Path Learning for Cross-Domain Gaze Estimation
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red)](document/HalfMix_and_Dual_Path_Learning.pdf)
-[![Poster](https://img.shields.io/badge/Poster-PDF-blue)](document/BMVC2025_HalfMix_Poster.pdf)
+[![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/paper.pdf)
+[![Poster](https://img.shields.io/badge/Poster-PDF-blue)](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/poster.pdf)
 [![Conference](https://img.shields.io/badge/Conference-BMVC%202025-green)](https://bmvc2025.org/)
 
 
@@ -9,8 +9,8 @@ This repository contains the official PyTorch implementation of the paper **"Hal
 
 ## 📄 Paper & Poster
 
-- **Paper:** [`HalfMix_and_Dual_Path_Learning.pdf`](document/HalfMix_and_Dual_Path_Learning.pdf)
-- **Poster:** [`BMVC2025_HalfMix_Poster.pdf`](document/BMVC2025_HalfMix_Poster.pdf)
+- **Paper:** [`HalfMix_and_Dual_Path_Learning.pdf`](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/paper.pdf)
+- **Poster:** [`BMVC2025_HalfMix_Poster.pdf`](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/poster.pdf)
 
 For detailed information about the method, please refer to the paper.
 
