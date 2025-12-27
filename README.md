@@ -9,8 +9,8 @@ This repository contains the official PyTorch implementation of the paper **"Hal
 
 ## 📄 Paper & Poster
 
-- **Paper:** [`HalfMix_and_Dual_Path_Learning.pdf`](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/paper.pdf)
-- **Poster:** [`BMVC2025_HalfMix_Poster.pdf`](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/poster.pdf)
+- **Paper:** [Link](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/paper.pdf)
+- **Poster:** [Link](https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_453/poster.pdf)
 
 For detailed information about the method, please refer to the paper.
 
